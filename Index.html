@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Platform</title>
+    <link rel="stylesheet" href="AIson/Aison.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-magic"></i> Content Creator Platform</h1>
+            <p>Choose your content type and start creating</p>
+        </header>
+
+        <main class="main-content">
+            <div class="prompt-section">
+                <div class="prompt-container">
+                    <label for="prompt-input" class="prompt-label">
+                        <i class="fas fa-edit"></i> What would you like to create?
+                    </label>
+                    <textarea 
+                        id="prompt-input" 
+                        class="prompt-input" 
+                        placeholder="Describe your content idea here..."
+                        rows="4"
+                    ></textarea>
+                </div>
+            </div>
+
+            <div class="content-type-section">
+                <h2>Choose Content Type</h2>
+                <div class="content-type-buttons">
+                    <button class="content-type-btn active" data-type="text">
+                        <i class="fas fa-font"></i>
+                        <span>Text</span>
+                    </button>
+                    <button class="content-type-btn" data-type="image">
+                        <i class="fas fa-image"></i>
+                        <span>Image</span>
+                    </button>
+                    <button class="content-type-btn" data-type="video">
+                        <i class="fas fa-video"></i>
+                        <span>Video</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="upload-section" id="upload-section" style="display: none;">
+                <div class="upload-area" id="upload-area">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Click to upload or drag and drop</p>
+                    <input type="file" id="file-input" accept="image/*,video/*" style="display: none;">
+                </div>
+                <div class="file-info" id="file-info" style="display: none;">
+                    <div class="file-preview" id="file-preview"></div>
+                    <div class="file-details">
+                        <span class="file-name" id="file-name"></span>
+                        <span class="file-size" id="file-size"></span>
+                        <button class="remove-file" id="remove-file">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview-section" id="preview-section" style="display: none;">
+                <h3>Preview</h3>
+                <div class="preview-content" id="preview-content"></div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn btn-primary" id="generate-btn">
+                    <i class="fas fa-play"></i> Generate Content
+                </button>
+                <button class="btn btn-secondary" id="clear-btn">
+                    <i class="fas fa-trash"></i> Clear All
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script src="AIson/AIson.js"></script>
+</body>
+</html>
